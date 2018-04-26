@@ -5,7 +5,7 @@ ENV RAINLOOP_VERSION 1.11.3
 
 ENV RAINLOOP_BUILD="/etc/rainloop" \
     RAINLOOP_HOME="/var/www/rainloop" \
-    REQUIRED_PACKAGES="apache2 php5-apache2 php5-openssl php5-xml php5-json php5-iconv php5-curl php5-pdo_mysql php5-pdo_pgsql php5-pdo_sqlite php5-dom php5-zlib php5-ldap unzip curl"
+    REQUIRED_PACKAGES="apache2 apache2-ssl php5-apache2 php5-openssl php5-xml php5-json php5-iconv php5-curl php5-pdo_mysql php5-pdo_pgsql php5-pdo_sqlite php5-dom php5-zlib php5-ldap unzip curl"
 
 RUN \
   apk update && \
@@ -33,6 +33,7 @@ ADD php-maxsize.ini /etc/php5/conf.d/maxsize.ini
 WORKDIR $RAINLOOP_HOME
 
 EXPOSE 80
+EXPOSE 443
 VOLUME /var/www/rainloop/data
 
 ADD docker-entrypoint.sh /

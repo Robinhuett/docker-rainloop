@@ -6,5 +6,7 @@ services:
     build: .
     volumes:
       - ./data:/var/www/rainloop/data
+      - /etc/letsencrypt:/etc/letsencrypt:ro
     ports:
       - "80:80"
+      - "443:443"
