@@ -40,3 +40,4 @@ The MIT License (MIT)
 
 Copyright (c) 2016 Niclas Mietz
 Updated to 1.11.0.203 by Interlegis (2017)
+Updated to 1.11.3 by Robinhuett (2018)
